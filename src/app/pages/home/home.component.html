@@ -1,0 +1,53 @@
+<div class="banner">
+    <div class="content">
+        <h1 class="mb-5">Pec-Bar </h1>
+        <a routerLink="menu">Reserva ya tu juego <i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>
+<!-- steps -->
+<div class="container mt-5 mb-5">
+    <h1 class="text-center">Vuestros <span class="highlight" >Juegos Favoritos</span></h1>
+    <div class="row mt-5">
+        <!-- one -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <img src="../../../assets/img/brass.jpg">
+                <!-- <h1>1</h1>
+                <p>select food</p> -->
+            </div>
+        </div>
+        <!-- two -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <img src="../../../assets/img/cluedo.jpg">
+
+                <!-- <h1>2</h1>
+                <p>fil the details</p> -->
+            </div>
+        </div>
+        <!-- three -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <img src="../../../assets/img/trivial.webp">
+
+                <!-- <h1>3</h1>
+                <p>your order delivered in minutes</p> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- foodbox -->
+<div class="container mt-4 mb-4 ">
+    <h1 class="text-center">Vuestra <span class="highlight" >Comida Favorita</span></h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3 " *ngFor="let fd of foodData; index as i" >
+            <div class="foodbox" *ngIf="i <=3" >
+                <img src="{{ fd.foodImg }}" alt="">
+                <h1>{{ fd.foodName }}</h1>
+                <p>{{ fd.foodPrice | currency:'€' }}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="view-more">view more <i class="bi bi-arrow-right"></i></a>
+</div>
