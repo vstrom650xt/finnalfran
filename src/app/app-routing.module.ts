@@ -5,7 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { MenupageComponent } from './pages/menupage/menupage.component';
-
+import{FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component'
 
 const routes: Routes = [
   {
@@ -20,7 +20,10 @@ const routes: Routes = [
     path: "menu/:id",
     component: MenupageComponent
   },
-
+  {
+    path: "formulario",
+    component: FormularioReservaComponent
+  },
   {
     path: "about",
     component: AboutComponent

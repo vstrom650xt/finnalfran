@@ -1,0 +1,10 @@
+<h2>Lista de Juegos de Mesa</h2>
+
+<div *ngFor="let juego of juegos">
+  <h3>{{ juego.nombre }}</h3>
+  <p>Jugadores: {{ juego.jugadores }}</p>
+  <p>Duración: {{ juego.duracion }}</p>
+  <p *ngIf="juego.disponible; else noDisponible">Disponible</p>
+  <ng-template #noDisponible>No disponible</ng-template>
+  <button (click)="reservarJuego(juego.id)" [disabled]="!juego.disponible">Reservar</button>
+</div>

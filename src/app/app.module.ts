@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // Importa FormsModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MenupageComponent } from './pages/menupage/menupage.component';
 import { JuegoComponent } from './pages/juego/juego.component';
+import { ListaJuegosComponent } from './lista-juegos/lista-juegos.component';
+import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,13 @@ import { JuegoComponent } from './pages/juego/juego.component';
     AboutComponent,
     ContactComponent,
     MenupageComponent,
-    JuegoComponent
+    JuegoComponent,    
+    ListaJuegosComponent,
+     FormularioReservaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,FormsModule 
     
   ],
   providers: [],
