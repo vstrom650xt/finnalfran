@@ -14,7 +14,7 @@ import { MenupageComponent } from './pages/menupage/menupage.component';
 import { JuegoComponent } from './pages/juego/juego.component';
 import { ListaJuegosComponent } from './lista-juegos/lista-juegos.component';
 import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
-
+import {AuthService} from './pages/services/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +34,7 @@ import { FormularioReservaComponent } from './pages/formulario-reserva/formulari
     AppRoutingModule,FormsModule 
     
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

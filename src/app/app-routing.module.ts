@@ -7,6 +7,7 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { MenupageComponent } from './pages/menupage/menupage.component';
 import{FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component'
 import { JuegoComponent } from './pages/juego/juego.component';
+import{ IniciosesionComponent} from'./pages/iniciosesion/iniciosesion.component';
 const routes: Routes = [
   {
     path: "",
@@ -35,6 +36,11 @@ const routes: Routes = [
   {
     path: "contact",
     component: ContactComponent
+  },
+
+  {
+    path: "iniciosesion",
+    component: IniciosesionComponent
   }
 ];
 
