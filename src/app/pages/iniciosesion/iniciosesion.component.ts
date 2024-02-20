@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router'; // Importa Router desde @angular/router
 
 @Component({
   selector: 'app-iniciosesion',
@@ -12,9 +13,23 @@ export class IniciosesionComponent {
   password: string = '';
   confirmPassword: string = '';
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService,
+    public router: Router // Inyecta Router en el constructor
+
+    ) { }
 
   registrarUsuario() {
+
+    if (this.password !== this.confirmPassword) {
+      alert('Las contraseñas no coinciden');
+      return;
+    }
+
+    if (!this.nombre || !this.correo || !this.password || !this.confirmPassword) {
+      alert('Todos los campos son obligatorios');
+      return;
+    }
+
     const usuario ={
       nombre: this.nombre,
       correo: this.correo,
@@ -22,8 +37,8 @@ export class IniciosesionComponent {
     };
 
     this.authService.registrarUsuario(usuario);
-    alert('Usuario registrado exitosamente');
-    // Puedes redirigir al usuario a otra página después del registro si es necesario
+    alert('Usuario registrado correctamente');
+    this.router.navigate(['/']); // '/' es la ruta de la página de inicio
   }
 
   obtenerUsuariosRegistrados() {
