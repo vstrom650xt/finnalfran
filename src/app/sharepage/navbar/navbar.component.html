@@ -15,12 +15,20 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="juegos" routerLinkActive="active-link" *ngIf="isLoggedIn()">Juegos</a>
         </li>
+
+        <li class="nav-item">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="miperfil" *ngIf="isLoggedIn()">Mi perfil</a>
+            </li>
+          </ul>
+        </li>
     
         <li class="nav-item">
           <a class="nav-link" routerLink="iniciosesion" routerLinkActive="active-link" *ngIf="!isLoggedIn()">Iniciar Sesión</a>
           <a class="nav-link" (click)="cerrarSesion()" *ngIf="isLoggedIn()">Cerrar Sesión</a>
-          <a class="nav-link"  routerLink="miperfil"  *ngIf="isLoggedIn()">Mi perfil</a>
         </li>
+     
       </ul>
     </div>
   </div>
