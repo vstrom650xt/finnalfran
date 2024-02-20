@@ -31,7 +31,7 @@ const routes: Routes = [
     component: JuegopageComponent
   },
   {
-    path: "formulario",
+    path: "formulario/:id",
     component: FormularioReservaComponent
   },
   {

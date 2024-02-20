@@ -11,7 +11,8 @@ import { JuegoService } from '../services/juego.service';
 })
 export class JuegopageComponent implements OnInit {
 
-  constructor(private param: ActivatedRoute, private service: JuegoService) { }
+  constructor(private param: ActivatedRoute,
+    private service: JuegoService) { }
 
   getJuegoId: any;
   juegoData: any;
@@ -19,7 +20,7 @@ export class JuegopageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getJuegoId = this.param.snapshot.paramMap.get('id')
-    if(this.getJuegoId) {
+    if (this.getJuegoId) {
       this.juegoData = this.service.juegoDetalle.filter((val) => {
         console.log(this.juegoData)
         return val.id == this.getJuegoId

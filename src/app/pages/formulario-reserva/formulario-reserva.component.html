@@ -1,31 +1,42 @@
+<div *ngIf="juegoData">
+  <h2>{{ juegoData.juego }}</h2>
+  <p>Descripción: {{ juegoData.juegoInfo }}</p>
+  <img src="{{ juegoData.juegoImg }}" width="100%" alt="">
+</div>
+<div class="dropdown">
+  <button class="dropbtn" (click)="toggleDropdown()">Reservar Juego</button>
+  <div class="dropdown-content" [ngClass]="{ 'show': dropdownOpen }">
+    <form (ngSubmit)="reservarJuego()">
+      <h2>Reservar Juego</h2>
 
-<form (ngSubmit)="reservarJuego()">
-  <h2>Reservar Juego</h2>
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required>
+      </div>
+     
+      <div>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" [(ngModel)]="fecha" name="fecha" required min="{{ fechaMin }}" max="{{ fechaMax }}" (change)="resetearError()">
+        <div *ngIf="fechaError" class="error-message">Selecciona una fecha dentro de la semana siguiente.</div>
+      </div>
+      <div>
+        <label for="horario">Horario:</label>
+        <select id="horario" [(ngModel)]="horario" name="horario" required>
+          <option value="mañana">Mañana</option>
+          <option value="tarde">Tarde</option>
+          <option value="noche">Noche</option>
+        </select>
+      </div>
 
-  <div>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required>
+      <div>
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" [(ngModel)]="hora" name="hora" required>
+      </div>
+      <button type="submit">Reservar</button>
+    </form>
   </div>
-  <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" [(ngModel)]="email" name="email" required>
-  </div>
-  <div>
-    <label for="juego">Juego:</label>
-    <select id="juego" [(ngModel)]="juegoSeleccionado" name="juegoSeleccionado" required>
-      <option value="" disabled selected>Selecciona un juego</option>
-      <option *ngFor="let juego of juegosService.juegos" [value]="juego.nombre">{{ juego.nombre }}</option>
-    </select>
-  </div>
-  <div>
-    <label for="fecha">Fecha:</label>
-    <input type="date" id="fecha" [(ngModel)]="fecha" name="fecha" required>
-  </div>
-  <div>
-    <label for="hora">Hora:</label>
-    <input type="time" id="hora" [(ngModel)]="hora" name="hora" required>
-  </div>
-  <button type="submit">Reservar</button>
-  <button (click)="verReservas()">Ver Reservas</button>
-
-</form>
+</div>
