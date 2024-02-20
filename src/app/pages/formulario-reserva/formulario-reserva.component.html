@@ -9,16 +9,6 @@
   <div class="dropdown-content" [ngClass]="{ 'show': dropdownOpen }">
     <form (ngSubmit)="reservarJuego()">
       <h2>Reservar Juego</h2>
-
-      <div>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required>
-      </div>
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" [(ngModel)]="email" name="email" required>
-      </div>
-     
       <div>
         <label for="fecha">Fecha:</label>
         <input type="date" id="fecha" [(ngModel)]="fecha" name="fecha" required min="{{ fechaMin }}" max="{{ fechaMax }}" (change)="resetearError()">

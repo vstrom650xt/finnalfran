@@ -7,7 +7,6 @@ export class OrderDetailsService {
 
   constructor() { }
 
-  // fooddetails 
 
   foodDetails = [
     {

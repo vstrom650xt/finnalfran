@@ -21,6 +21,7 @@ export class FormularioReservaComponent implements OnInit {
   fechaMax: string = '';
   fechaError = false;
   hora: string = ''; 
+  
 
   constructor(
     public juegosService: JuegosService,
@@ -45,11 +46,12 @@ export class FormularioReservaComponent implements OnInit {
   reservarJuego() {
     if (this.validarFecha()) {
       const reserva = {
-        nombre: this.nombre,
-        email: this.email,
         juego: this.juegoData.juego,
         fecha: this.fecha,
-        horario: this.horario
+        horario: this.horario,
+        hora:this.hora,
+        categoria:this.juegoData.categoria,
+        estado:this.juegoData.estado
       };
 
       console.log(reserva)
