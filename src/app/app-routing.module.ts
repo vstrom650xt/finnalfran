@@ -9,6 +9,8 @@ import{FormularioReservaComponent } from './pages/formulario-reserva/formulario-
 import { JuegoComponent } from './pages/juego/juego.component';
 import{ IniciosesionComponent} from'./pages/iniciosesion/iniciosesion.component';
 import { JuegopageComponent } from './pages/juegopage/juegopage.component';
+import { UsuariopagComponent } from './pages/usuariopag/usuariopag.component';
+
 const routes: Routes = [
   {
     path: "",
@@ -42,10 +44,13 @@ const routes: Routes = [
     path: "contact",
     component: ContactComponent
   },
-
   {
     path: "iniciosesion",
     component: IniciosesionComponent
+  },
+  {
+    path: "miperfil",
+    component: UsuariopagComponent
   }
 ];
 

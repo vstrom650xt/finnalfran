@@ -16,6 +16,7 @@ import { FormularioReservaComponent } from './pages/formulario-reserva/formulari
 import {AuthService} from './pages/services/auth.service';
 import { IniciosesionComponent } from './pages/iniciosesion/iniciosesion.component';
 import { JuegopageComponent } from './pages/juegopage/juegopage.component';
+import { UsuariopagComponent } from './pages/usuariopag/usuariopag.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { JuegopageComponent } from './pages/juegopage/juegopage.component';
     ListaJuegosComponent,
      FormularioReservaComponent,
      IniciosesionComponent,
-     JuegopageComponent
+     JuegopageComponent,
+     UsuariopagComponent
   ],
   imports: [
     BrowserModule,
