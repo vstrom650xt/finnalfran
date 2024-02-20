@@ -1,8 +1,9 @@
-<div *ngIf="juegoData">
+<div class="container" *ngIf="juegoData">
   <h2>{{ juegoData.juego }}</h2>
-  <p>Descripción: {{ juegoData.juegoInfo }}</p>
   <img src="{{ juegoData.juegoImg }}" width="100%" alt="">
+  <p>Descripción: {{ juegoData.juegoInfo }}</p>
 </div>
+
 <div class="dropdown">
   <button class="dropbtn" (click)="toggleDropdown()">Reservar Juego</button>
   <div class="dropdown-content" [ngClass]="{ 'show': dropdownOpen }">
