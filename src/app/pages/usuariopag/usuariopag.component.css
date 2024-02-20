@@ -1,0 +1,12 @@
+/* Estilos para centrar el contenido */
+div {
+    text-align: center;
+    margin: 0 auto; /* Centra horizontalmente el div */
+    max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+  }
+  
+  /* Estilos para los elementos p dentro de los divs */
+  div p {
+    margin-bottom: 10px; /* Espacio entre los párrafos */
+  }
+  

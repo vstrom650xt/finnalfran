@@ -1,9 +1,8 @@
 <div *ngIf="usuario">
     <h2>Información del Usuario</h2>
     <p>Nombre: {{ usuario.nombre }}</p>
-    <p>Apellidos: {{ usuario.apellidos }}</p>
-    <p>Edad: {{ usuario.edad }}</p>
-    <p>Puntos: {{ usuario.puntos }}</p>
+    <p>Email: {{ usuario.correo }}</p>
+
   </div>
   
   <div *ngIf="reservas && reservas.length">
