@@ -5,20 +5,22 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  usuariosRegistrados: any[] = [];
-  usuario: any = {}; // Asegúrate de que el objeto usuario se inicialice correctamente aquí
+  usuario: any = null;
+  isLogged: boolean = false;
   constructor() { }
 
   registrarUsuario(usuario: any) {
-    this.usuariosRegistrados.push(usuario);
     console.log('Usuario registrado:', usuario);
+    this.usuario = usuario; // Una vez registrado, establece el usuario actual
+
   }
 
   obtenerUsuariosRegistrados() {
-    return this.usuariosRegistrados;
+    return this.usuario;
   }
 
   isLoggedIn(): boolean {
-    return !!this.usuario; // Devuelve true si hay información de usuario, false si no la hay
+    console.log(this.usuario)
+    return !!this.usuario; // Devuelve true si hay un usuario registrado, false si no lo hay
   }
 }

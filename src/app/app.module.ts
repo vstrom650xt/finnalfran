@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Importa FormsModule
-
+import { FormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './sharepage/navbar/navbar.component';
@@ -15,6 +14,7 @@ import { JuegoComponent } from './pages/juego/juego.component';
 import { ListaJuegosComponent } from './lista-juegos/lista-juegos.component';
 import { FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component';
 import {AuthService} from './pages/services/auth.service';
+import { IniciosesionComponent } from './pages/iniciosesion/iniciosesion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +27,8 @@ import {AuthService} from './pages/services/auth.service';
     MenupageComponent,
     JuegoComponent,    
     ListaJuegosComponent,
-     FormularioReservaComponent
+     FormularioReservaComponent,
+     IniciosesionComponent
   ],
   imports: [
     BrowserModule,

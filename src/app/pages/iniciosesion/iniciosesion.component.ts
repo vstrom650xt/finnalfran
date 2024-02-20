@@ -14,21 +14,19 @@ export class IniciosesionComponent {
 
   constructor(public authService: AuthService) { }
 
-  usuario(){
-      const usuario ={
-        nombre: this.nombre,
-        correo: this.correo,
-        password: this.password       
-   
-      }
-
-      this.authService.registrarUsuario(usuario);
-
-  }
-
   registrarUsuario() {
-    this.authService.registrarUsuario(this.usuario);
+    const usuario ={
+      nombre: this.nombre,
+      correo: this.correo,
+      password: this.password       
+    };
+
+    this.authService.registrarUsuario(usuario);
     alert('Usuario registrado exitosamente');
     // Puedes redirigir al usuario a otra página después del registro si es necesario
+  }
+
+  obtenerUsuariosRegistrados() {
+    return this.authService.obtenerUsuariosRegistrados;
   }
 }
