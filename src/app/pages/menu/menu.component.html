@@ -6,8 +6,9 @@
                 <h1>{{ fd.foodName }}</h1>
                 <p>{{ fd.foodPrice | currency: '€' }}</p>
                 <br />
-                <a class="buybtn" [routerLink]="['/menu',fd.id]">Mostrar <i class="bi bi-bag"></i></a>
-                <div class="tooltiptext">{{ fd.foodDetails }}</div>
+                <a class="buybtn" [routerLink]="['/menu',fd.id]">Mostrar información  <i class="bi bi-search"></i>
+                    <div class="tooltiptext">{{ fd.foodDetails }}</div>
+                </a>
             </div>
         </div>
     </div>
