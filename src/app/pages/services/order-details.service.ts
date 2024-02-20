@@ -8,49 +8,49 @@ export class OrderDetailsService {
   constructor() { }
 
   // fooddetails 
-  
+
   foodDetails = [
     {
-      id:1,
-      foodName:"Paneer Grilled Sandwich",
-      foodDetails:"Pan-fried masala paneer.",
-      foodPrice:200,
-      foodImg:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/wzfq7djolqxgdhghebbq"
+      id: 1,
+      foodName: "Burger de queso",
+      foodDetails: "¡Disfruta de la deliciosa Burger Suprema de Queso! Jugosa carne, pan fresco y una mezcla de quesos fundidos que te harán volver por más. ¡El sabor supremo que no querrás perderte!",
+      foodPrice: 12,
+      foodImg: "https://vstrom650xt.github.io/imagenesAngular/burger.jpg"
     },
     {
-      id:2,
-      foodName:"Veggie Supreme",
-      foodDetails:"Onion| Green Capsicum|Mushroom |black olives , sweet corn , Red Paprika topped with Cheese",
-      foodPrice:369,
-      foodImg:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/sgbobtbxlojbtdnr2m5k"
+      id: 2,
+      foodName: "Nachos Supreme",
+      foodDetails: "¡Sumérgete en una explosión de sabores con nuestros Nachos Supreme! Crujientes totopos cubiertos con queso derretido, salsa picante, guacamole fresco y crema agria. ¡La combinación perfecta para compartir con amigos o disfrutar solo!",
+      foodPrice: 8,
+      foodImg: "https://vstrom650xt.github.io/imagenesAngular/nacho3.jpg"
     },
     {
-      id:3,
-      foodName:"Paneer Burger",
-      foodDetails:"panner",
-      foodPrice:149,
-      foodImg:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/xbeqlsck3p0kei53to7k"
+      id: 3,
+      foodName: "Tequeños",
+      foodDetails: "¡Descubre el sabor irresistible de nuestros Tequeños Dorados! Deliciosos palitos de queso envueltos en masa crujiente y dorados a la perfección. ¡El aperitivo perfecto para cualquier ocasión, que te dejará queriendo más!",
+      foodPrice: 6,
+      foodImg: "https://vstrom650xt.github.io/imagenesAngular/360_F_337361026_iVGcJgrSAzIKDlGWZobzmkHL5xYOgtbF.jpg"
     },
     {
-      id:4,
-      foodName:"Veg Masala Roll In Naan",
-      foodDetails:"A homely mix of mashed potato and veggies, seasoned with Indian spices. A filling sure to take you back to mom's kitchen.",
-      foodPrice:140,
-      foodImg:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/l2ng6gtge30sqaafqng7"
+      id: 4,
+      foodName: "Alitas de pollo",
+      foodDetails: "¡Atrévete a volar con nuestras Alitas de Pollo! Jugosas y llenas de sabor, nuestras alitas están disponibles en una variedad de deliciosas salsas, desde la clásica BBQ hasta la picante Sriracha. ¡Una explosión de sabor en cada bocado que te dejará deseando más!",
+      foodPrice: 6,
+      foodImg: "https://vstrom650xt.github.io/imagenesAngular/fingers-de-pollo-4-815x458.jpg"
     },
     {
-      id:5,
-      foodName:"Indulgence Brownie",
-      foodDetails:"(Eggless) Indulge in richly decadent chocolate brownie crafted with love & topped with bitter-sweet chocolate that provides ultra-rich chocolate experience.",
-      foodPrice:105,
-      foodImg:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/iqlmbg1hlyc0dspdyzzv"
+      id: 5,
+      foodName: "Aros de cebolla",
+      foodDetails: "¡Crujientes por fuera, tiernos por dentro! Nuestros Aros de Cebolla están recién cortados y rebozados en una mezcla de especias secretas, luego fritos a la perfección hasta obtener un dorado crujiente. ¡Un acompañamiento clásico que complementará cualquier comida!",
+      foodPrice: 5,
+      foodImg: "https://vstrom650xt.github.io/imagenesAngular/foto-heroe-1024x693.jpg"
     },
     {
-      id:6,
-      foodName:"Oreo Cheesecake Ice Cream",
-      foodDetails:"Oreo ice cream",
-      foodPrice:219,
-      foodImg:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/wtj8esaeslvlscv8glj6"
+      id: 6,
+      foodName: "Hot dog",
+      foodDetails: "¡Una experiencia culinaria en cada mordisco! Nuestro Hot Dog Gourmet está hecho con una salchicha premium, servida en un pan suave y tostado, y acompañada de una variedad de sabrosos condimentos y salsas. ¡Una explosión de sabor en cada bocado que te hará volver por más!",
+      foodPrice: 4.5,
+      foodImg: "https://vstrom650xt.github.io/imagenesAngular/hot.jpg"
     }
   ]
 }
