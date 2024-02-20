@@ -47,11 +47,12 @@ export class FormularioReservaComponent implements OnInit {
       const reserva = {
         nombre: this.nombre,
         email: this.email,
-        juego: this.juegoSeleccionado,
+        juego: this.juegoData.juego,
         fecha: this.fecha,
         horario: this.horario
       };
 
+      console.log(reserva)
       this.juegosService.agregarReserva(reserva);
 
       // Limpiar el formulario después de guardar la reserva
