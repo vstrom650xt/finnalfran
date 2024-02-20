@@ -4,9 +4,8 @@
             <div class="foodbox mt-3 mb-3">
                 <img src="{{ jg.juegoImg }}" alt="">
                 <h1>{{ jg.juego }}</h1>
-                <p>{{ jg.juegoPrecio | currency: '€' }}</p>
                 <br />
-                <a class="buybtn" [routerLink]="['/juego',jg.id]">Mostrar información <i class="bi bi-bag"></i></a>
+                <a class="buybtn" [routerLink]="['/juego',jg.id]">Mostrar información <i class="bi bi-search"></i></a>
                 <div class="tooltiptext">{{ jg.juegoInfo }}</div>
                 <a class="buybtn" [routerLink]="['/formulario',jg.id]">Reservar <i class="bi bi-bag"></i></a>
 
