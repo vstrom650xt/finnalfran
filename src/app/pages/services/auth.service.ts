@@ -23,4 +23,8 @@ export class AuthService {
     console.log(this.usuario)
     return !!this.usuario; // Devuelve true si hay un usuario registrado, false si no lo hay
   }
+  
+  cerrarSesion(): void {
+    this.usuario = ''; // Llama al método cerrarSesion() del servicio AuthService
+  }
 }

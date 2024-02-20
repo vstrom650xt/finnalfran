@@ -18,11 +18,13 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="formulario" routerLinkActive="active-link" *ngIf="isLoggedIn()">Reserva</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" routerLink="contact" routerLinkActive="active-link" *ngIf="isLoggedIn()">Contacto</a>
-        </li>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link" routerLink="iniciosesion" routerLinkActive="active-link">Resgistro/Inicio Sesión</a>
+          <a class="nav-link" routerLink="iniciosesion" routerLinkActive="active-link" *ngIf="!isLoggedIn()">Iniciar Sesión</a>
+          <a class="nav-link" (click)="cerrarSesion()" *ngIf="isLoggedIn()">Cerrar Sesión</a>
+          <a class="nav-link"  routerLink="contact"  *ngIf="isLoggedIn()">Mi perfil</a>
         </li>
       </ul>
     </div>

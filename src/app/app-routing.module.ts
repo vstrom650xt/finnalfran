@@ -8,6 +8,7 @@ import { MenupageComponent } from './pages/menupage/menupage.component';
 import{FormularioReservaComponent } from './pages/formulario-reserva/formulario-reserva.component'
 import { JuegoComponent } from './pages/juego/juego.component';
 import{ IniciosesionComponent} from'./pages/iniciosesion/iniciosesion.component';
+import { JuegopageComponent } from './pages/juegopage/juegopage.component';
 const routes: Routes = [
   {
     path: "",
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: "juegos",
     component: JuegoComponent
+  },
+  {
+    path: "juego/:id",
+    component: JuegopageComponent
   },
   {
     path: "formulario",

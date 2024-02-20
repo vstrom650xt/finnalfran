@@ -5,7 +5,7 @@ import { OrderDetailsService } from '../services/order-details.service';
 @Component({
   selector: 'app-menupage',
   templateUrl: './menupage.component.html',
-  styleUrls: ['./menupage.component.css']
+  styleUrl: './menupage.component.css'
 })
 export class MenupageComponent implements OnInit {
 
