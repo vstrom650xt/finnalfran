@@ -14,7 +14,7 @@
         <p>Horario de la reserva: {{ reserva.horario }}</p>
         <p>Hora: {{ reserva.hora }}</p>
         <p>Estado de la Reserva: {{ reserva.estado }}</p>
-        <!-- <button (click)="cambiarHoraReserva(reserva.id, nuevaHora)">Cambiar Hora de Reserva</button> -->
+        <button (click)="cambiarHoraReserva(reserva.id, nuevaHora)">Cambiar Hora de Reserva</button>
         <button (click)="cancelarReserva(reserva.id)">Cancelar Reserva</button>
       </li>
     </ul>

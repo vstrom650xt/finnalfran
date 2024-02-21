@@ -21,6 +21,7 @@ export class FormularioReservaComponent implements OnInit {
   fechaMax: string = '';
   fechaError = false;
   hora: string = ''; 
+  router: any;
   
 
   constructor(
@@ -51,19 +52,26 @@ export class FormularioReservaComponent implements OnInit {
         horario: this.horario,
         hora:this.hora,
         categoria:this.juegoData.categoria,
-        estado:this.juegoData.estado
+        estado: 'ocupado' 
       };
 
-      console.log(reserva)
       this.juegosService.agregarReserva(reserva);
 
+      const juegoIndex = this.service.juegoDetalle.findIndex(juego => juego.id == this.getJuegoId);
+      if (juegoIndex !== -1) {
+        this.service.juegoDetalle[juegoIndex].estado = 'ocupado';
+      }
+  
+
+alert('Reserva realizada correctamente')
       // Limpiar el formulario después de guardar la reserva
-      this.nombre = '';
-      this.email = '';
+
       this.juegoSeleccionado = '';
       this.fecha = '';
       this.horario = '';
       this.fechaError = false;
+      this.router.navigate(['/']); // Ajusta la ruta según la configuración de tus rutas
+
     } else {
       this.fechaError = true;
     }

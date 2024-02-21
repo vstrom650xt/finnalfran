@@ -24,4 +24,13 @@ export class JuegosService {
   mostrarReservas() {
     console.log(this.reservas);
   }
+  eliminarReserva(idReserva: string) {
+    this.reservas = this.reservas.filter(reserva => reserva.id !== idReserva);
+  }
+  actualizarReserva(reservaActualizada: any) {
+    const index = this.reservas.findIndex(reserva => reserva.id === reservaActualizada.id);
+    if (index !== -1) {
+      this.reservas[index] = reservaActualizada;
+    }
+  }
 }
