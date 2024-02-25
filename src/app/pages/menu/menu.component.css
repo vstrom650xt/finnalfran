@@ -66,10 +66,9 @@
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s; 
 }
 
 .buybtn:hover .tooltiptext {
     visibility: visible;
-    opacity: 1;
-}
+    opacity: 1; }
