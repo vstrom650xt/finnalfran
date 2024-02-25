@@ -66,11 +66,11 @@
     z-index: 1;
     left: 50%;
     transform: translateX(-50%); 
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 0.3s; /* Efecto de transición */
+    opacity: 0;
+    transition: opacity 0.3s; 
 }
 
 .buybtn:hover .tooltiptext {
     visibility: visible;
-    opacity: 1; /* Muestra el tooltip al pasar el cursor */
+    opacity: 1; 
 }
