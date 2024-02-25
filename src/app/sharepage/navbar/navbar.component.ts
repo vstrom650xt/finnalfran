@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   }
 
   cerrarSesion(): void {
-    this.authService.cerrarSesion(); // Llama al método cerrarSesion() del servicio AuthService
+    this.authService.cerrarSesion(); 
   }
 
 }

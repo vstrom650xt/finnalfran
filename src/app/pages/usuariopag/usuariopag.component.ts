@@ -10,28 +10,21 @@ import { JuegosService } from '../services/juegos.service';
 export class UsuariopagComponent implements OnInit {
   usuario: any;
   reservas: any[] = [];
-  nuevaHora: string = '';
 
   constructor(private authService: AuthService, private juegoservice:JuegosService) { }
 
   ngOnInit(): void {
     this.usuario = this.authService.obtenerUsuariosRegistrados();
-    this.reservas = this.juegoservice.obtenerReservas();
+    this.reservas = this.juegoservice.obtenerReservas().map(reserva => ({ ...reserva, nuevaHora: '' }));
   }
 
-  cambiarHoraReserva(idReserva: string, nuevaHora: string) {
-    const reserva = this.reservas.find(reserva => reserva.id === idReserva);
-    if (reserva) {
-      reserva.hora = nuevaHora;
-      this.juegoservice.actualizarReserva(reserva);
-    }
+  cambiarHoraReserva(reserva: any) {
+    reserva.hora = reserva.nuevaHora;
+    this.juegoservice.actualizarReserva(reserva);
   }
-
-  cancelarReserva(idReserva: string) {
-    const reserva = this.reservas.find(reserva => reserva.id === idReserva);
-    if (reserva) {
-      reserva.estado = 'cancelado';
-      this.juegoservice.actualizarReserva(reserva);
-    }
+  
+  cancelarReserva(reserva: any) {
+    reserva.estado = 'cancelado';
+    this.juegoservice.actualizarReserva(reserva);
   }
 }
