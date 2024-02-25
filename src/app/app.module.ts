@@ -7,8 +7,6 @@ import { NavbarComponent } from './sharepage/navbar/navbar.component';
 import { FooterComponent } from './sharepage/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { MenupageComponent } from './pages/menupage/menupage.component';
 import { JuegoComponent } from './pages/juego/juego.component';
 import { ListaJuegosComponent } from './lista-juegos/lista-juegos.component';
@@ -24,8 +22,6 @@ import { UsuariopagComponent } from './pages/usuariopag/usuariopag.component';
     FooterComponent,
     HomeComponent,
     MenuComponent,
-    AboutComponent,
-    ContactComponent,
     MenupageComponent,
     JuegoComponent,    
     ListaJuegosComponent,
