@@ -10,3 +10,43 @@ div {
     margin-bottom: 10px; /* Espacio entre los párrafos */
   }
   
+
+  /* Estilos para el menú desplegable */
+select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Estilos para los botones */
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Estilos adicionales para resaltar el botón de "Cancelar Reserva" */
+button.cancelar {
+  background-color: #f44336; /* Color de fondo */
+}
+
+/* Estilos para la lista de reservas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilos para los elementos de la lista de reservas */
+li {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}

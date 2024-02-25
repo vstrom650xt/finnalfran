@@ -1,22 +1,25 @@
 <div *ngIf="usuario">
-    <h2>Información del Usuario</h2>
-    <p>Nombre: {{ usuario.nombre }}</p>
-    <p>Email: {{ usuario.correo }}</p>
+  <h2>Información del Usuario</h2>
+  <p>Nombre: {{ usuario.nombre }}</p>
+  <p>Email: {{ usuario.correo }}</p>
+</div>
 
-  </div>
-  
-  <div *ngIf="reservas && reservas.length">
-    <h2>Juegos Reservados</h2>
-    <ul>
+<div *ngIf="reservas && reservas.length">
+  <h2>Juegos Reservados</h2>
+  <ul>
       <li *ngFor="let reserva of reservas">
-        <p>Nombre del Juego: {{ reserva.juego }}</p>
-        <p>Fecha de la reserva: {{ reserva.fecha }}</p>
-        <p>Horario de la reserva: {{ reserva.horario }}</p>
-        <p>Hora: {{ reserva.hora }}</p>
-        <p>Estado de la Reserva: {{ reserva.estado }}</p>
-        <button (click)="cambiarHoraReserva(reserva.id, nuevaHora)">Cambiar Hora de Reserva</button>
-        <button (click)="cancelarReserva(reserva.id)">Cancelar Reserva</button>
+          <p>Nombre del Juego: {{ reserva.juego }}</p>
+          <p>Fecha de la reserva: {{ reserva.fecha }}</p>
+          <p>Horario de la reserva: {{ reserva.horario }}</p>
+          <p>Hora: {{ reserva.hora }}</p>
+          <p>Estado de la Reserva: {{ reserva.estado }}</p>
+          <select [(ngModel)]="nuevaHora">
+              <option value="mañana">Mañana</option>
+              <option value="tarde">Tarde</option>
+              <option value="noche">Noche</option>
+          </select>
+          <button (click)="cambiarHoraReserva(reserva.id, nuevaHora)">Confirmar Cambio</button>
+          <button (click)="cancelarReserva(reserva.id)">Cancelar Reserva</button>
       </li>
-    </ul>
-  </div>
-  
+  </ul>
+</div>

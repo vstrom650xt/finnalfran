@@ -70,8 +70,7 @@ alert('Reserva realizada correctamente')
       this.fecha = '';
       this.horario = '';
       this.fechaError = false;
-      this.router.navigate(['/']); // Ajusta la ruta según la configuración de tus rutas
-
+      this.router.navigate(['/']); 
     } else {
       this.fechaError = true;
     }
