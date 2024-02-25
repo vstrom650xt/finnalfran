@@ -50,7 +50,7 @@ export class FormularioReservaComponent implements OnInit {
         juego: this.juegoData.juego,
         fecha: this.fecha,
         horario: this.horario,
-        hora:this.hora,
+        hora:this.horario,
         categoria:this.juegoData.categoria,
         estado: 'ocupado' 
       };

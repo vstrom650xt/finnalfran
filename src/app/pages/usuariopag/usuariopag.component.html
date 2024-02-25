@@ -10,7 +10,7 @@
     <li *ngFor="let reserva of reservas">
       <p>Nombre del Juego: {{ reserva.juego }}</p>
       <p>Fecha de la reserva: {{ reserva.fecha }}</p>
-      <p>Horario de la reserva: {{ reserva.horario }}</p>
+      <!-- <p>Horario de la reserva: {{ reserva.horario }}</p> -->
       <p>Hora: {{ reserva.hora }}</p>
       <p>Estado de la Reserva: {{ reserva.estado }}</p>
       <select [(ngModel)]="reserva.nuevaHora">
